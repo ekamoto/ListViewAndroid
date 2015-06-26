@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_list_view_customizado_paddingLeft">10.0dip</dimen>
+</resources>
