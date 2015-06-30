@@ -18,7 +18,7 @@ public class HisamotoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        LinearLayout layout = new LinearLayout(this);
+        LinearLayout layout = new LinearLayout(getApplicationContext());
 
         /** Rotina para chamar uma ListActivity com layout padrão do android  **/
         Button botaoListagemLayoutPadraoAndroid = new Button(getApplicationContext());

@@ -51,7 +51,7 @@ public class ListViewLayoutCustomizadoActivity extends ListActivity {
          * Define o Adapter que irá mostrar os dados na ListView.
          *
          */
-        setListAdapter(new ListViewCustomizadoAdapter(this, itens));
+        setListAdapter(new ListViewCustomizadoAdapter(getApplicationContext(), itens));
     }
 
     /***
