@@ -3,6 +3,8 @@ package br.com.hisamoto.listViewAndroid.activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -33,6 +35,8 @@ public class ListViewActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         /**
          * Define o Adapter que irá mostrar os dados na ListView.
          */
@@ -57,6 +61,17 @@ public class ListViewActivity extends ListActivity {
                 Toast.makeText(getApplicationContext(), "Não existe activity para essa opção", Toast.LENGTH_SHORT).show();
                 //finish();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home) {
+            Log.i("agenda", "botao voltar");
+            finish();
+        }
+
+        // TODO Auto-generated method stub
+        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -16,5 +16,6 @@
         <activity android:name=".activity.TrabalhandoComIDActivity"/>
         <activity android:name=".activity.AlinhamentoActivity"/>
         <activity android:name=".activity.ListViewLayoutCustomizadoActivity"/>
+        <activity android:name=".activity.ListPesquisaActivity"/>
     </application>
 </manifest>

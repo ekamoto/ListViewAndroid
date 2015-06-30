@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import br.com.hisamoto.listViewAndroid.activity.ListPesquisaActivity;
 import br.com.hisamoto.listViewAndroid.activity.ListViewActivity;
 import br.com.hisamoto.listViewAndroid.activity.ListViewLayoutCustomizadoActivity;
 
@@ -22,7 +23,7 @@ public class HisamotoActivity extends Activity {
 
         /** Rotina para chamar uma ListActivity com layout padrão do android  **/
         Button botaoListagemLayoutPadraoAndroid = new Button(getApplicationContext());
-        botaoListagemLayoutPadraoAndroid.setText("Listagem Layout Padrão");
+        botaoListagemLayoutPadraoAndroid.setText("L.Pad.");
         botaoListagemLayoutPadraoAndroid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +36,7 @@ public class HisamotoActivity extends Activity {
 
         /** Rotina para chamar uma ListActivity com layout customizado  **/
         Button botaoListagemLayoutCustomizado = new Button(getApplicationContext());
-        botaoListagemLayoutCustomizado.setText("Listagem Layout Customizado");
+        botaoListagemLayoutCustomizado.setText("L. Custo.");
         botaoListagemLayoutCustomizado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +46,19 @@ public class HisamotoActivity extends Activity {
             }
         });
         layout.addView(botaoListagemLayoutCustomizado);
+
+        /** Rotina para chamar uma ListActivity com pesquisa  **/
+        Button botaoListagemPesquisa = new Button(getApplicationContext());
+        botaoListagemPesquisa.setText("L. Custo.");
+        botaoListagemPesquisa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), ListPesquisaActivity.class);
+                startActivity(i);
+            }
+        });
+        layout.addView(botaoListagemPesquisa);
 
         setContentView(layout);
     }
